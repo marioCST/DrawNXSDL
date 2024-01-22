@@ -1,0 +1,11 @@
+out/
+build/
+*.nro
+*.elf
+*.nacp
+.vscode/
+.fleet/
+.idea/
+*.nso
+*.nsp
+*.npdm
