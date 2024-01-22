@@ -8,4 +8,4 @@ Press B to draw a larger rectangle.
 
 # Building
 
-Requires devkitPro with the Nintendo Switch/NX toolchains and SDL2 for Switch.
+Requires devkitPro with the Nintendo Switch/NX toolchain and SDL2 for Switch.
