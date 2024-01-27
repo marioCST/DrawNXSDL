@@ -74,7 +74,7 @@ int main(int argc, char** argv) {
     initStuff();
 
     SDL_Window* window = SDL_CreateWindow("DrawNXSDL", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_W, SCREEN_H, SDL_WINDOW_SHOWN);
-    SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_SOFTWARE);
+    SDL_Renderer* renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
     SDL_Texture* texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STREAMING, SCREEN_W, SCREEN_H);
 
@@ -146,9 +146,13 @@ int main(int argc, char** argv) {
         SDL_RenderCopy(renderer, texture, NULL, &rect);
 
         SDL_RenderPresent(renderer);
+
+        SDL_Delay(1);
     }
 
     SDL_DestroyTexture(texture);
+    SDL_DestroyRenderer(renderer);
+    SDL_DestroyWindow(window);
 
     exitStuff();
 
